@@ -1,0 +1,14 @@
+<%= form_with  model: @event, url: events_path, local: true do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_area :description %>
+
+  <%= form.date_field :savedate %>
+  <%= form.select :savetime, ['00:00~', '00:30~', '01:00~'], {include_blank: '選択'}, class: 'date_time' %>
+
+  <%= form.text_field :shop_name %>
+  <%= form.text_field :shop_url %>
+  <%= form.text_field :map_url %>
+  <%= form.text_area :comment %>
+
+  <%= form.submit %>
+<% end %>

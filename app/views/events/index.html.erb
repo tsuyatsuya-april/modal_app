@@ -1,0 +1,13 @@
+<h1>トップページです</h1>
+
+<div>
+  <%= link_to '新規登録', new_event_path %>
+</div>
+
+<div>
+  <% @events.each do |event| %>
+    <div>
+      <%= link_to event.name, event_path(event.id) %>
+    </div>
+  <% end %>
+</div>
